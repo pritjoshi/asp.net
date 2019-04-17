@@ -1,0 +1,123 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ShopShop.master.cs" Inherits="ShopShop.ShopShop" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="main.css" rel="stylesheet" />
+
+    <style type="text/css">
+        .jumbotron {
+            background-color: lightblue;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 2%;
+        }
+
+        .container {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+
+        h2 {
+            font-size: x-large;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+        }
+
+            .fa:hover {
+                opacity: 0.7;
+            }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="container-fluid">
+
+    <form id="form1" runat="server">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <asp:ImageButton ID="ImageButton1" runat="server" Height="124px" ImageUrl="~/Image/logo.jpg" PostBackUrl="~/Index.aspx" Width="225px" />
+
+            <asp:Menu ID="Menu1" runat="server" BackColor="lightblue" DynamicHorizontalOffset="2" Font-Bold="False" Font-Italic="False" Font-Names="Verdana" Font-Size="XX-Large" Font-Strikeout="False" Font-Underline="False" ForeColor="#666666" Orientation="Horizontal" StaticSubMenuIndent="10px">
+                <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicMenuStyle BackColor="#E3EAEB" />
+                <DynamicSelectedStyle BackColor="#1C5E55" />
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Mens.aspx" Text="Mens" Value="Mens"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Womens.aspx" Text="Womens" Value="Womens"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/About_us.aspx" Text="About us" Value="About us"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Feedback.aspx" Text="Feedback" Value="Feedback"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Contact_us.aspx" Text="Contact us" Value="Contact us"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/AddProduct.aspx" Text="Manage Items" Value="Admin"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <StaticSelectedStyle BackColor="#1C5E55" />
+            </asp:Menu>
+            &nbsp; &nbsp; <input type="text" name="search" placeholder="Search" />
+            &nbsp; &nbsp;
+            <asp:ImageButton ID="ImageButton2" runat="server" Height="40px" ImageUrl="~/Image/shopping-cart.png" PostBackUrl="~/Cart.aspx" Width="40px" />
+
+        </nav>
+        <div class="jumbotron ">
+            <h1>ShopShop</h1>
+            <h2>One stop shop for genuine shoppers</h2>
+            <br />
+        </div>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <footer class="text-center text-capitalize">
+            <label>copyright &copy; the Shopshop clothing, all rights reserved.</label>
+
+            <p>
+                To contact us, call us at <a href="phone:226-899-2403">226-899-2403</a> or email us at
+                        <asp:HyperLink ID="linkMail" runat="server" NavigateUrl="mailto:Pjoshi9584@conestogac.on.ca">Pjoshi9584@conestogac.on.ca</asp:HyperLink>
+            </p>
+            <a href="https://www.facebook.com/prit.joshi" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/prit1003" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/pritjoshi/?hl=en" class="fa fa-instagram"></a>
+        </footer>
+
+    </form>
+
+</body>
+
+</html>
